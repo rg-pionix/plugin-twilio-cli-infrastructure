@@ -9,10 +9,11 @@ class InfraEnvironmentNew extends TwilioClientCommand {
   async run() {
     await super.run();
     try {
-      let { args } = this.parse(InfraEnvironmentNew);
+      let { args } = await this.parse(InfraEnvironmentNew);
+      
       let accountSid = this.twilioClient.accountSid;
       let deploymentEnvironments = readInfra();
-
+      
       if (
         deploymentEnvironments[accountSid] &&
         deploymentEnvironments[accountSid].deployed

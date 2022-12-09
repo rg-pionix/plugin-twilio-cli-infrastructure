@@ -8,7 +8,7 @@ const { Printer, runPulumiCommand } = require('../../../utils');
 class InfraEnvironmentSet extends TwilioClientCommand {
   async run() {
     await super.run();
-    let { args } = this.parse(InfraEnvironmentSet);
+    let { args } = await this.parse(InfraEnvironmentSet);
     let environment = args.environmentName;
     try {
       let deploymentEnvironments = readInfra();

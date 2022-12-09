@@ -1,5 +1,5 @@
 {
-  "name": "plugin-twilio-infra",
+  "name": "plugin-twilio-cli-infrastructure",
   "description": "Develop and deploy your Twilio infrastructure using code",
   "version": "0.4.1",
   "author": "Kaique Lupo Leite <klupo@twilio.com>",
@@ -11,13 +11,17 @@
     {
       "name": "Maria Bermudez",
       "email": "mbermudez@twilio.com"
+    },
+    {
+      "name": "Razvan Goldstein",
+      "email": "razvan.goldstein@pionix.ro"
     }
   ],
   "bugs": "https://github.com/twilio-infra-as-code/plugin-twilio-infra/issues",
   "dependencies": {
     "@oclif/command": "^1.5.19",
     "@oclif/config": "^1.13.3",
-    "@twilio/cli-core": "^4.3.3",
+    "@twilio/cli-core": "^7.4.2",
     "chalk": "^4.1.0",
     "dotenv": "^10.0.0",
     "inquirer": "^8.0.0",
@@ -63,28 +67,28 @@
       "@oclif/plugin-help"
     ],
     "topics": {
-      "infra": {
+      "iac": {
         "description": "Locally develop, debug and deploy infrastructure to Twilio project describing it as code"
       },
-      "infra:new": {
+      "iac:new": {
         "description": "Creates a new project based on a template"
       },
-      "infra:deploy": {
+      "iac:deploy": {
         "description": "Deploys and updates resources described in this directory to a Twilio project"
       },
-      "infra:preview": {
+      "iac:preview": {
         "description": "Previews changes related to resources described in this directory and mapped to a Twilio project"
       },
-      "infra:destroy": {
+      "iac:destroy": {
         "description": "Destroy an existing stack and the deployed resources"
       },
-      "infra:environment:new": {
+      "iac:environment:new": {
         "description": "Create a new environment for the current Twilio project"
       },
-      "infra:environment:get": {
+      "iac:environment:get": {
         "description": "Get the deployment environment set for the current project"
       },
-      "infra:environment:set": {
+      "iac:environment:set": {
         "description": "Set the deployment environment for the current project"
       }
     }
